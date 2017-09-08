@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Verify Response Code.">
+
+	<test name="No such Datastream available.">
+		<parameter name="method" value="GET" />
+		<parameter name="ExpectedStatusCode" value="200" /> <!-- Here wrong expected code is provided -->
+		<parameter name="requiredUrl" value="/datastream/unp4bmo2wcdq9d?streaming=false#hasMoreData=false" />
+		<parameter name="Authorization" value="Bearer jz77vljp12zt7vwnf29iswv07rl1dp40" />
+		<parameter name="verificationEntities" value="id=unp4bmo2wcdq9d@name=Jig4"/>
+		
+		<classes>
+			<class name="api_automation_rest.api.DataStream">
+				<methods>
+					<include name="verifyResponseCode" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

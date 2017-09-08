@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Retrieve data from datastream">
+
+	<test name="retrieve data from data stream">
+		<parameter name="method" value="GET" />
+		<parameter name="ExpectedStatusCode" value="200" />
+		<parameter name="requiredUrl" value="/datastream/uqwe6k2lhefn9a?streaming=false#hasMoreData=false" />
+		<parameter name="Authorization" value="Bearer jz77vljp12zt7vwnf29iswv07rl1dp40" />
+		<parameter name="verificationEntities" value="id=uqwe6k2lhefn9a@name=Jig4"/>
+		<classes>
+			<class name="api_automation_rest.api.DataStream">
+				<methods>
+					<include name="retrieveDataFromDatastream" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> 

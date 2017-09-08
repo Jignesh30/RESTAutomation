@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Verify Response Code.">
+
+	<test name="No such Datastream available.">
+		<parameter name="method" value="POST" />
+		<parameter name="ExpectedStatusCode" value="201" />
+		<parameter name="requiredUrl" value="/datastream"/>
+		<parameter name="Authorization" value="Bearer jz77vljp12zt7vwnf29iswv07rl1dp40" />
+		<parameter name="requestBody" value=
+		"{
+		&quot;name&quot;: &quot;jig11&quot;
+		,&quot;tenant&quot;: &quot;Zs6dk03l3w2rp0&quot;,
+			&quot;createdBy&quot;: &quot;tut21t3cga8sml&quot;,
+			  &quot;inputList&quot;: [],
+			  &quot;dataSource&quot;: {
+			    &quot;type&quot;: &quot;STANDALONE&quot;
+			  },
+			   &quot;field&quot;: {
+			        &quot;entityIdentifier&quot;: &quot;person&quot;,
+			        &quot;entityName&quot;: null,
+			        &quot;signal&quot;: {},
+			        &quot;time&quot;: {
+			            &quot;zone&quot;: &quot;Asia/Calcutta&quot;,
+			            &quot;identifier&quot;: &quot;time&quot;,
+			            &quot;format&quot;: &quot;millis&quot;
+			        }
+			    }
+			}
+		"/>
+		<classes>
+			<class name="api_automation_rest.api.DataStream">
+				<methods>
+					<include name="createDataStream" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

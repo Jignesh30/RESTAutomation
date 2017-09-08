@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Create datastream and then add data to datastream.">
+
+	<test name="Create datastream and then add data to datastream.">
+		<parameter name="method" value="POST" />
+		<parameter name="ExpectedStatusCode" value="201" />
+		<parameter name="requiredUrl" value="/datastream"/>
+		<parameter name="Authorization" value="Bearer jz77vljp12zt7vwnf29iswv07rl1dp40" />
+		<parameter name="requestBody" value=
+		"{
+		&quot;name&quot;: &quot;$newDataStreamId$&quot;
+		,&quot;tenant&quot;: &quot;Zs6dk03l3w2rp0&quot;,
+			&quot;createdBy&quot;: &quot;tut21t3cga8sml&quot;,
+			  &quot;inputList&quot;: [],
+			  &quot;dataSource&quot;: {
+			    &quot;type&quot;: &quot;STANDALONE&quot;
+			  },
+			   &quot;field&quot;: {
+			        &quot;entityIdentifier&quot;: &quot;person&quot;,
+			        &quot;entityName&quot;: null,
+			        &quot;signal&quot;: {},
+			        &quot;time&quot;: {
+			            &quot;zone&quot;: &quot;Asia/Calcutta&quot;,
+			            &quot;identifier&quot;: &quot;time&quot;,
+			            &quot;format&quot;: &quot;millis&quot;
+			        }
+			    }
+			}
+		"/>
+		<parameter name="additionalRequestBody" value="{&quot;time&quot;: 1491979648469, &quot;person&quot;: &quot;p1&quot;, 
+		&quot;T_xacc&quot;: 9.3545, &quot;T_yacc&quot;: 1.3157, &quot;T_zacc&quot;: 5.4637, &quot;RA_xacc&quot;: -2.6817,
+		 &quot;RA_yacc&quot;: 6.4624, &quot;RA_zacc&quot;: 7.0821, &quot;LA_xacc&quot;: 0.12413, &quot;LA_yacc&quot;: -3.8967,
+		  &quot;LA_zacc&quot;: 9.3141, &quot;RL_xacc&quot;: -11.011, &quot;RL_yacc&quot;: 8.0965, &quot;RL_zacc&quot;: 0.74234, 
+		  &quot;LL_xacc&quot;: -9.0006, &quot;LL_yacc&quot;: -8.99, &quot;LL_zacc&quot;: -0.03717}
+		"/>
+		<classes>
+			<class name="api_automation_rest.api.CreateDataStreamAndAddDataToDataStream">
+				<methods>
+					<include name="createDataStreamAndAddDatatoDatastream" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

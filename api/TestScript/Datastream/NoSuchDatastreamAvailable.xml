@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="No such data from datastream">
+
+	<test name="No such Datastream available.">
+		<parameter name="method" value="GET" />
+		<parameter name="ExpectedStatusCode" value="404" /> <!-- For wrong data stream . response code is 404 -->
+		<parameter name="requiredUrl" value="/datastream/unp4bmo2wcdq9d#streaming=false#hasMoreData=false" /> <!-- Here wrong URL Is provided -->
+		<parameter name="Authorization" value="Bearer jz77vljp12zt7vwnf29iswv07rl1dp40" />
+		<parameter name="verificationEntities" value="message=No such Datastream available"/> 		
+		<classes>
+			<class name="api_automation_rest.api.DataStream">
+				<methods>
+					<include name="NoSuchDatastreamAvailable" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

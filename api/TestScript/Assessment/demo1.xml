@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="AdvancedSearch_Accreditations">
+
+	<test name="AdvancedSearch_Accreditations">
+		<parameter name="method" value="GET" />
+		<parameter name="ExpectedStatusCode" value="200" />
+		<parameter name="requiredUrl" value="/assessment" />
+		<parameter name="Authorization" value="Bearer jz77vljp12zt7vwnf29iswv07rl1dp40" />
+		
+		<classes>
+			<class name="api_automation_rest.api.CreateAssessment">
+				<methods>
+					<include name="createAssessment" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> 
